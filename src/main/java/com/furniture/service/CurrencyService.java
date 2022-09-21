@@ -57,7 +57,6 @@ public class CurrencyService {
         Double toRate=currencyTo.getExchangeRate();
         Double amount=Double.parseDouble(String.format("%.2f", convertDto.getAmount()*(toRate/fromRate)));
         amountDto.setAmount(amount);
-
         return amountDto;
     }
 }
