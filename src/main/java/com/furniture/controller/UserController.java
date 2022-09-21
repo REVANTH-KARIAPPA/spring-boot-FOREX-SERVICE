@@ -53,7 +53,7 @@ public class UserController {
         Set<Role> roleSet= roles.stream().filter(r->r.getName().equals("USER")).collect(Collectors.toSet());
         if(roleSet.isEmpty())
         {
-            throw new UserNotFoundException("INVALID");
+            throw new UserNotFoundException("Currently Admin doesn't have access");
         }
         return ResponseEntity.ok(new JwtAuthenticationResponse(token,userService.getUserByName(loginUser.getUsername())));
     }
@@ -85,27 +85,6 @@ public class UserController {
     public User saveUser( @Valid @RequestBody UserDto user ){
         return userService.save(user);
     }
-
-
-
-    @PreAuthorize("hasAnyRole('ADMIN')")
-    @RequestMapping(value="/admin", method = RequestMethod.GET)
-    public String adminPing(){
-        return "Only Admins Can Read This";
-    }
-
-    @PreAuthorize("hasAnyRole('ADMIN','CUSTOMER')")
-    @RequestMapping(value="/customer", method = RequestMethod.GET)
-    public String coustomerPing(){
-        return "Any coustomer Can Read This";
-    }
-
-    @PreAuthorize("hasAnyRole('SELLER')")
-    @RequestMapping(value="/seller", method = RequestMethod.GET)
-    public String sellerPing(){
-        return "Only seller Can Read This";
-    }
-
 
 
 
