@@ -1,8 +1,6 @@
 # spring-boot-FOREX-SERVICE
 
 Intiall setup that should be done. 
- Frontend in angular :- https://github.com/REVANTH-KARIAPPA/Angular-Forex-Service.git
-
 
 
 --Insert in Roles Table.
@@ -14,7 +12,7 @@ INSERT INTO role (id, description, name) VALUES (2, 'User role', 'USER');
 
 
 Sign up a user from frontend.
-
+Frontend in angular :- https://github.com/REVANTH-KARIAPPA/Angular-Forex-Service.git
 
 -- In user_roles Table give user role as ADMIN.
 eg:-
