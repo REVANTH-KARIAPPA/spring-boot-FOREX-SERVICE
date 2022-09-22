@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
+import com.furniture.Repository.AccountRepository;
 import com.furniture.Repository.RoleRepository;
 import com.furniture.Repository.UserRepository;
 import com.furniture.exception.UserNameException;
@@ -24,6 +25,8 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 
     @Autowired
     private RoleService roleService;
+    @Autowired
+    private AccountRepository accountRepository;
 
 
 
@@ -141,6 +144,11 @@ public class UserServiceImpl implements UserDetailsService, UserService {
         if(users.isPresent()){
             User u=userRepository.findById(id).get();
             u.removeRoles(u.getRoles());
+            Optional<Account> account1= Optional.ofNullable(u.getAccount());
+            if(account1.isPresent()) {
+                Account account2 = u.getAccount();
+                accountRepository.deleteById(account2.getAccountId());
+            }
             userRepository.deleteById(id);
         }
         else{

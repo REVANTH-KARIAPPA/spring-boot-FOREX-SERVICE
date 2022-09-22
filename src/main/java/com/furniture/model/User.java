@@ -35,6 +35,9 @@ public class User {
     @Column
     private String phone;
 
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private Account account;
+
 
 
 

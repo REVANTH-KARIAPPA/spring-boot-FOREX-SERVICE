@@ -13,13 +13,15 @@ import javax.persistence.*;
 
 @Entity
 @Data
-public class Currency {
+public class Account {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private int currencyId;
+    private Integer accountId;
+
     @Column(unique = true)
-    private String currency;
-    private String currencyName;
-    private Double exchangeRate;
+    private String accountNumber;
+    private String bankName;
+    private String ifscCode;
+    private Double balance;
 
 }
