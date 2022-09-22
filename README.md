@@ -1,7 +1,8 @@
 # spring-boot-FOREX-SERVICE
 
-Intiall setup should be done before running the forntend
+Intiall setup should be done before running the forntend 
 Frontend in angular :- https://github.com/REVANTH-KARIAPPA/Angular-Forex-Service.git
+
 
 
 --Insert in Roles Table
