@@ -8,21 +8,14 @@ pipeline {
                 bat 'mvn compile'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Test'
-                bat 'mvn test'
-            }
-        }
+
         stage('Package') {
             steps {
                 echo 'Package'
                 bat 'mvn package'
             }
             post {
-                 always {
-                junit 'target/surefire-reports/*.xml'
-              }
+
                 success {
                           archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
                 }
