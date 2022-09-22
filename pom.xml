@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.akhianand</groupId>
-	<artifactId>spring-boot-E-Commerce-Furniture</artifactId>
+	<artifactId>spring-boot-ForexService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-E-Commerce-Furniture</name>
-	<description>A Spring Boot Project for E-Commerce Web Application</description>
+	<name>spring-boot-ForexService</name>
+	<description>A Spring Boot Project for Exchange service Web Application</description>
 
 	<properties>
 		<java.version>11</java.version>
