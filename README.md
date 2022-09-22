@@ -1,25 +1,27 @@
 # spring-boot-FOREX-SERVICE
 
-Intiall setup should be done before running the forntend 
+Intiall setup that should be done. 
 Frontend in angular :- https://github.com/REVANTH-KARIAPPA/Angular-Forex-Service.git
 
 
 
---Insert in Roles Table
+--Insert in Roles Table.
 INSERT INTO role (id, description, name) VALUES (1, 'Admin role', 'ADMIN');
 INSERT INTO role (id, description, name) VALUES (2, 'User role', 'USER');
 
 
---Steps to create an ADMIN (if user is directely created in database it give error since password is not encrypted by ByEcrypt)
+--Steps to create an ADMIN. (if user is directely created in database it give error since password is not encrypted by ByEcrypt)
+
+
 Sign up a user from frontend.
 
 
--- In user_roles Table give user role as ADMIN 
+-- In user_roles Table give user role as ADMIN.
 eg:-
 INSERT INTO public.user_roles(user_id, role_id)
 VALUES (1, 1);
 
--- In user_roles Table remove same users role as USER
+-- In user_roles Table remove same users role as USER.
 eg:-
 DELETE FROM public.user_roles
 WHERE user_id=1 and role_id=2;
