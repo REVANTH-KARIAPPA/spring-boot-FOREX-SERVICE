@@ -1,7 +1,7 @@
 # spring-boot-FOREX-SERVICE
 
 Intiall setup that should be done. 
-Frontend in angular :- https://github.com/REVANTH-KARIAPPA/Angular-Forex-Service.git
+ Frontend in angular :- https://github.com/REVANTH-KARIAPPA/Angular-Forex-Service.git
 
 
 
